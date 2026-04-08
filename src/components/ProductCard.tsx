@@ -36,7 +36,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <h3 className="font-heading text-base font-semibold text-card-foreground line-clamp-1">{name}</h3>
         <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">{desc}</p>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-lg font-bold text-primary">{product.price} KWD</span>
+          <span className="text-lg font-bold text-primary">{product.price}</span>
           <button
             onClick={handleAdd}
             disabled={added}
