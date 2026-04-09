@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import { ShoppingCart, Check } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCart } from '@/contexts/CartContext';
+import { toast } from 'sonner';
 import type { Product } from '@/data/products';
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { lang, t } = useLanguage();
   const { addToCart } = useCart();
-  const [added, setAdded] = useState(false);
 
   const handleAdd = () => {
     addToCart(product);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1500);
+    const name = lang === 'ar' ? product.nameAr : product.name;
+    toast.success(`${name} ${t('added')}`, { duration: 2000 });
   };
 
   const name = lang === 'ar' ? product.nameAr : product.name;
@@ -35,18 +34,12 @@ const ProductCard = ({ product }: { product: Product }) => {
       <div className="p-4 space-y-2">
         <h3 className="font-heading text-base font-semibold text-card-foreground line-clamp-1">{name}</h3>
         <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">{desc}</p>
-        <div className="flex items-center justify-between pt-2">
-          <span className="text-lg font-bold text-primary">{product.price} KWD</span>
+        <div className="pt-2">
           <button
             onClick={handleAdd}
-            disabled={added}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
-              added
-                ? 'bg-green-500 text-primary-foreground'
-                : 'bg-primary text-primary-foreground hover:shadow-luxury hover:scale-105'
-            }`}
+            className="w-full flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 bg-primary text-primary-foreground hover:shadow-luxury hover:scale-105"
           >
-            {added ? <><Check className="w-3.5 h-3.5" />{t('added')}</> : <><ShoppingCart className="w-3.5 h-3.5" />{t('addToCart')}</>}
+            <ShoppingCart className="w-3.5 h-3.5" />{t('addToCart')}
           </button>
         </div>
       </div>
