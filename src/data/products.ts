@@ -30,13 +30,16 @@ const cakeNames = [
   { name: "Barbie Cake", nameAr: "كيك باربي", desc: "Pink Barbie themed dream cake", descAr: "كيك باربي الوردي الحالم", img: "/products/cakes/barbie-cake.jpg" },
   { name: "Engagement Cake", nameAr: "كيك الخطوبة", desc: "Elegant engagement celebration cake", descAr: "كيك خطوبة أنيق", img: "/products/cakes/engagement-cake.jpg" },
   { name: "Chef Theme Cake", nameAr: "كيك الشيف", desc: "Creative chef themed cake", descAr: "كيك إبداعي بطابع الشيف", img: "/products/cakes/chef-theme-cake.jpg" },
-  // { name: "Princess Castle Cake", nameAr: "كيك قلعة الأميرة", desc: "Fairy tale princess castle cake", descAr: "كيك قلعة الأميرة الخيالي", img: "/products/cakes/princess-castle-cake.jpg" },
-  // { name: "Unicorn Cake", nameAr: "كيك يونيكورن", desc: "Magical unicorn rainbow cake", descAr: "كيك يونيكورن قوس قزح السحري", featured: true, img: "/products/cakes/unicorn-cake.jpg" },
-  // { name: "Dinosaur Cake", nameAr: "كيك ديناصور", desc: "Jurassic dinosaur themed cake", descAr: "كيك ديناصور من العصر الجوراسي", img: "/products/cakes/dinosaur-cake.jpg" },
-  // { name: "Safari Cake", nameAr: "كيك سفاري", desc: "Wild safari adventure cake", descAr: "كيك مغامرة السفاري البرية", img: "/products/cakes/safari-cake.jpg" },
-  // { name: "Galaxy Cake", nameAr: "كيك المجرة", desc: "Cosmic galaxy themed cake", descAr: "كيك كوني بطابع المجرة", img: "/products/cakes/galaxy-cake.jpg" },
-  // { name: "Balloon Cake", nameAr: "كيك البالونات", desc: "Colorful balloon celebration cake", descAr: "كيك احتفال بالبالونات الملونة", img: "/products/cakes/balloon-cake.jpg" },
-  // { name: "Graduation Cake", nameAr: "كيك التخرج", desc: "Proud graduation celebration cake", descAr: "كيك احتفال التخرج الفخور", img: "/products/cakes/graduation-cake.jpg" },
+  { name: "Trending Cake", nameAr: "كيكة التريند", desc: "The latest styles for modern celebrations.", descAr: "أحدث التصاميم العصرية لجميع احتفالاتكم المميزة.", img: "/products/cakes/trending-cake.jpeg" },
+  { name: "Gym Theme Cake", nameAr: "كيكة النادي الرياضي", desc: "Edible weights for your fitness enthusiast.", descAr: "أثقال صالحة للأكل لعشاق اللياقة البدنية.", featured: true, img: "/products/cakes/gym-theme-cake.jpeg" },
+  { name: "Engagement Cake", nameAr: "كيكة الخطوبة", desc: "Elegant designs for your beautiful beginning.", descAr: "تصاميم أنيقة تليق ببدايتكم الجميلة معاً.", img: "/products/cakes/engagement2-cake.jpeg" },
+  { name: "Anniversary Cake", nameAr: "كيكة ذكرى الزواج", desc: "Sweet layers celebrating your unique journey.", descAr: "طبقات حلوة تحتفل برحلة حبكم الفريدة.", img: "/products/cakes/anniversary-cake.jpeg" },
+  { name: "Wedding 3 Step Cake", nameAr: "كيكة الزفاف (3 أدوار)", desc: "Grand tiers for a timeless union.", descAr: "طبقات فاخرة تخلّد ذكرى زفافكم الأسطوري.", img: "/products/cakes/wedding-3step-cake.jpeg" },
+  { name: "Gender Reveal Cake", nameAr: "كيكة تحديد جنس المولود", desc: "Handcrafted surprises in pink or blue.", descAr: "مفاجآت مصنوعة يدوياً باللون الوردي أو الأزرق.", img: "/products/cakes/gender-reveal-cake.jpeg" },
+  { name: "LV Cake", nameAr: "كيكة لويس فيتون", desc: "Designer luxury in every delicious bite.", descAr: "فخامة التصميم في كل قمة شهية.", img: "/products/cakes/LV-cake.jpeg" },
+  { name: "Channel Cake", nameAr: "كيكة شانيل", desc: "Sophisticated fashion meeting iconic sweet style.", descAr: "أناقة الموضة تجتمع مع الطعم المميز.", img: "/products/cakes/channel-cake.jpeg" },
+  { name: "Dior Theme Floral cake", nameAr: "كيكة ديور بالزهور", desc: "Luxury couture paired with blooming elegance.", descAr: "رقي الأزياء الراقية مع لمسات الزهور.", img: "/products/cakes/dior-theme.jpeg" },
+
 ];
 
 const juiceList = [
