@@ -33,12 +33,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group flex-row">
-            <div className="order-1">
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={logo} alt="Wilds" className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-110" />
+            <div>
               <span className="font-heading text-xl font-bold text-foreground tracking-wide">WILDS</span>
               <span className="block text-[10px] tracking-[0.2em] text-muted-foreground uppercase">Cake Flower & Drink</span>
             </div>
-            <img src={logo} alt="Wilds" className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-110 order-first" />
           </Link>
 
           {/* Desktop Nav */}

@@ -73,8 +73,6 @@ export const translations: Record<Language, Record<string, string>> = {
     scrollToTop: "Back to Top",
     whatsappMessage: "Hi, I want to order from Wilds Cake Flower & Drink.",
     price: "Price",
-    selectProduct: "Select Product",
-    chooseProduct: "-- Choose a product --",
   },
   ar: {
     home: "الرئيسية",
@@ -136,7 +134,5 @@ export const translations: Record<Language, Record<string, string>> = {
     scrollToTop: "العودة للأعلى",
     whatsappMessage: "مرحباً، أريد الطلب من وايلدز كيك فلاور آند درينك.",
     price: "السعر",
-    selectProduct: "اختر المنتج",
-    chooseProduct: "-- اختر منتجاً --",
   },
 };

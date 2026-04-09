@@ -1,10 +1,9 @@
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { products } from '@/data/products';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const Contact = () => {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
 
   const contactItems = [
     { icon: Phone, label: t('phone'), value: '+965 65643999', href: 'tel:+96565643999' },
@@ -65,9 +64,8 @@ const Contact = () => {
                 const formData = new FormData(e.currentTarget);
                 const name = formData.get('name');
                 const email = formData.get('email');
-                const product = formData.get('product');
                 const message = formData.get('message');
-                const msg = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nProduct: ${product}\nMessage: ${message}`);
+                const msg = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
                 window.open(`https://wa.me/96565643999?text=${msg}`, '_blank');
               }}
               className="space-y-5 p-8 bg-card rounded-2xl border border-border/50 shadow-card"
@@ -79,27 +77,6 @@ const Contact = () => {
               <div>
                 <label className="block text-sm font-medium text-card-foreground mb-2">{t('yourEmail')}</label>
                 <input name="email" type="email" required className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-card-foreground mb-2">{t('selectProduct')}</label>
-                <select name="product" required className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow appearance-none">
-                  <option value="">{t('chooseProduct')}</option>
-                  <optgroup label={t('cakes')}>
-                    {products.filter(p => p.category === 'cakes').map(p => (
-                      <option key={p.id} value={lang === 'ar' ? p.nameAr : p.name}>{lang === 'ar' ? p.nameAr : p.name}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label={t('floral')}>
-                    {products.filter(p => p.category === 'floral').map(p => (
-                      <option key={p.id} value={lang === 'ar' ? p.nameAr : p.name}>{lang === 'ar' ? p.nameAr : p.name}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label={t('juices')}>
-                    {products.filter(p => p.category === 'juices').map(p => (
-                      <option key={p.id} value={lang === 'ar' ? p.nameAr : p.name}>{lang === 'ar' ? p.nameAr : p.name}</option>
-                    ))}
-                  </optgroup>
-                </select>
               </div>
               <div>
                 <label className="block text-sm font-medium text-card-foreground mb-2">{t('message')}</label>

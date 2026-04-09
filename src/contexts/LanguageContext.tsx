@@ -19,12 +19,12 @@ export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [lang, setLang] = useState<Language>('en');
-  const dir = 'ltr';
+  const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   useEffect(() => {
-    document.documentElement.setAttribute('dir', 'ltr');
+    document.documentElement.setAttribute('dir', dir);
     document.documentElement.setAttribute('lang', lang);
-  }, [lang]);
+  }, [lang, dir]);
 
   const t = (key: string) => translations[lang]?.[key] || key;
 
