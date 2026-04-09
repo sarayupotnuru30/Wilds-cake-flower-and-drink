@@ -71,7 +71,7 @@ export const translations: Record<Language, Record<string, string>> = {
     allRightsReserved: "All rights reserved.",
     // Misc
     scrollToTop: "Back to Top",
-    whatsappMessage: "Hi, I want to order from Wilds Cake Flower & Drink.",
+    whatsappMessage: "Hello! I would like to place an order with Wilds Cake, Flower & Drink. Could you please send me your current price list and availability?",
     price: "Price",
   },
   ar: {

@@ -1,4 +1,99 @@
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+// import { Phone, Mail, MapPin, Clock, Instagram, MessageCircle } from 'lucide-react';
+// import { useLanguage } from '@/contexts/LanguageContext';
+// import ScrollReveal from '@/components/ScrollReveal';
+
+// const Contact = () => {
+//   const { t } = useLanguage();
+
+//   const contactItems = [
+//     { 
+//       icon: MapPin, 
+//       label: t('visitUs') || 'Visit Us', 
+//       value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed Complex, Shop 6',
+//       linkText: 'Open in Google Maps',
+//       href: 'https://maps.google.com/?q=Wilds+Cake+Flower+Drink+Hawally',
+//       iconBg: 'bg-[#FFB6C1]' // Soft Pink
+//     },
+//     { 
+//       icon: Phone, 
+//       label: t('callUs') || 'Call Us', 
+//       value: '+965 65643999', 
+//       linkText: 'Call Now',
+//       href: 'tel:+96565643999',
+//       iconBg: 'bg-[#FFB6C1]' 
+//     },
+//     { 
+//       icon: Instagram, 
+//       label: 'Instagram', 
+//       value: '@wilds.kuwait\nFollow us for updates!', 
+//       linkText: 'Open Instagram',
+//       href: 'https://instagram.com/wilds.kuwait',
+//       iconBg: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' 
+//     },
+//     { 
+//       icon: MessageCircle, 
+//       label: 'WhatsApp', 
+//       value: 'Message us directly for quick orders!',
+//       linkText: 'Chat on WhatsApp',
+//       href: `https://wa.me/96565643999?text=${encodeURIComponent("Hi Wilds Cake, Flower & Drink! Could you please share the list of items you have?")}`,
+//       iconBg: 'bg-[#25D366]' 
+//     },
+//   ];
+
+//   return (
+//     <main className="pt-24 pb-16 min-h-screen bg-[#FFF5F7] text-[#4A4A4A]"> {/* Very light pink/white background */}
+//       <div className="container mx-auto px-4 lg:px-8">
+        
+//         {/* Header Section */}
+//         <ScrollReveal className="text-center mb-16">
+//           <p className="text-[#FF69B4] uppercase tracking-[0.2em] text-sm font-bold mb-2">GET IN TOUCH</p>
+//           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-[#D43790]">
+//             Contact Us
+//           </h1>
+//           <p className="text-[#7D7D7D] text-lg max-w-2xl mx-auto">
+//             Have questions or want to place a bulk order? Reach out to us!
+//           </p>
+//         </ScrollReveal>
+
+//         {/* 4-Column Grid Structure */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {contactItems.map((item, index) => (
+//             <ScrollReveal key={index} delay={index * 100}>
+//               <div className="flex flex-col items-center text-center p-10 rounded-2xl bg-white border border-[#FFD1DC] shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full group">
+                
+//                 {/* Circular Icon Container */}
+//                 <div className={`w-16 h-16 rounded-full ${item.iconBg} flex items-center justify-center mb-8 shadow-md group-hover:scale-110 transition-transform`}>
+//                   <item.icon className="w-8 h-8 text-white" />
+//                 </div>
+
+//                 {/* Text Content */}
+//                 <h3 className="text-xl font-bold mb-4 tracking-wide text-[#4A4A4A]">{item.label}</h3>
+//                 <div className="flex-grow">
+//                   <p className="text-sm text-[#7D7D7D] leading-relaxed whitespace-pre-line mb-6">
+//                     {item.value}
+//                   </p>
+//                 </div>
+
+//                 {/* Footer Style Link */}
+//                 <a 
+//                   href={item.href}
+//                   target="_blank"
+//                   rel="noreferrer"
+//                   className="text-[#FF69B4] font-semibold text-sm hover:text-[#D43790] flex items-center gap-2 transition-all underline underline-offset-4"
+//                 >
+//                   {item.linkText} <span>→</span>
+//                 </a>
+//               </div>
+//             </ScrollReveal>
+//           ))}
+//         </div>
+//       </div>
+//     </main>
+//   );
+// };
+
+// export default Contact;
+import { Phone, Mail, MapPin, Clock, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -6,92 +101,90 @@ const Contact = () => {
   const { t } = useLanguage();
 
   const contactItems = [
-    { icon: Phone, label: t('phone'), value: '+965 65643999', href: 'tel:+96565643999' },
-    { icon: Mail, label: t('email'), value: 'Wilds.kuwait@gmail.com', href: 'mailto:Wilds.kuwait@gmail.com' },
-    {
-      icon: MapPin,
-      label: t('address'),
-      value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed Commercial Complex\nOpposite Grand Hyper Market\nShop No - 6\nZip Code - 30000',
+    { 
+      icon: MapPin, 
+      label: t('visitUs') || 'Visit Us', 
+      value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed Complex, Shop 6',
+      linkText: null, // Removed link
+      href: null,
+      iconBg: 'bg-[#FFB6C1]' 
     },
-    { icon: Clock, label: t('businessHours'), value: t('hoursValue') },
+    { 
+      icon: Phone, 
+      label: t('callUs') || 'Call Us', 
+      value: '+965 65643999', 
+      linkText: 'Call Now',
+      href: 'tel:+96565643999',
+      iconBg: 'bg-[#FFB6C1]' 
+    },
+    { 
+      icon: Instagram, 
+      label: 'Instagram', 
+      value: '@wilds.kuwait\nFollow us for updates!', 
+      linkText: 'Open Instagram',
+      href: 'https://instagram.com/wilds.kuwait',
+      iconBg: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' 
+    },
+    { 
+      icon: MessageCircle, 
+      label: 'WhatsApp', 
+      value: 'Message us directly for quick orders!',
+      linkText: 'Chat on WhatsApp',
+      href: `https://wa.me/96565643999?text=${encodeURIComponent("Hi Wilds Cake, Flower & Drink! Could you please share the list of items you have?")}`,
+      iconBg: 'bg-[#25D366]' 
+    },
   ];
 
   return (
-    <main className="pt-24 pb-16 min-h-screen bg-background">
+    <main className="pt-24 pb-16 min-h-screen bg-[#FFF5F7] text-[#4A4A4A]">
       <div className="container mx-auto px-4 lg:px-8">
+        
+        {/* Header Section */}
         <ScrollReveal className="text-center mb-16">
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">{t('contactUs')}</h1>
-          <p className="text-muted-foreground">{t('contactSubtitle')}</p>
+          <p className="text-[#FF69B4] uppercase tracking-[0.2em] text-sm font-bold mb-2">GET IN TOUCH</p>
+          {/* Contact Us in Black Text */}
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-black">
+            Contact Us
+          </h1>
+          <p className="text-[#7D7D7D] text-lg max-w-2xl mx-auto">
+            Have questions or want to place a bulk order? Reach out to us!
+          </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
-          <ScrollReveal>
-            <div className="space-y-6">
-              {contactItems.map(item => (
-                <div key={item.label} className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border/50 shadow-card">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-card-foreground text-sm mb-1">{item.label}</h3>
-                    {item.href ? (
-                      <a href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors whitespace-pre-line">{item.value}</a>
-                    ) : (
-                      <p className="text-sm text-muted-foreground whitespace-pre-line">{item.value}</p>
-                    )}
-                  </div>
+        {/* 4-Column Grid Structure */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {contactItems.map((item, index) => (
+            <ScrollReveal key={index} delay={index * 100}>
+              <div className="flex flex-col items-center text-center p-10 rounded-2xl bg-white border border-[#FFD1DC] shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full group">
+                
+                {/* Circular Icon Container */}
+                <div className={`w-16 h-16 rounded-full ${item.iconBg} flex items-center justify-center mb-8 shadow-md group-hover:scale-110 transition-transform`}>
+                  <item.icon className="w-8 h-8 text-white" />
                 </div>
-              ))}
 
-              {/* WhatsApp CTA */}
-              <a
-                href={`https://wa.me/96565643999?text=${encodeURIComponent(t('whatsappMessage'))}`}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-green-500 text-primary-foreground font-semibold transition-all duration-300 hover:bg-green-600 hover:shadow-lg"
-              >
-                {t('orderWhatsApp')}
-              </a>
-            </div>
-          </ScrollReveal>
+                {/* Text Content */}
+                <h3 className="text-xl font-bold mb-4 tracking-wide text-[#4A4A4A]">{item.label}</h3>
+                <div className="flex-grow">
+                  <p className="text-sm text-[#7D7D7D] leading-relaxed whitespace-pre-line mb-6">
+                    {item.value}
+                  </p>
+                </div>
 
-          {/* Contact Form */}
-          <ScrollReveal delay={200}>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
-                const msg = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-                window.open(`https://wa.me/96565643999?text=${msg}`, '_blank');
-              }}
-              className="space-y-5 p-8 bg-card rounded-2xl border border-border/50 shadow-card"
-            >
-              <div>
-                <label className="block text-sm font-medium text-card-foreground mb-2">{t('yourName')}</label>
-                <input name="name" required className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow" />
+                {/* Footer Style Link (Conditionally rendered) */}
+                {item.linkText && (
+                  <a 
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#FF69B4] font-semibold text-sm hover:text-[#D43790] flex items-center gap-2 transition-all underline underline-offset-4"
+                  >
+                    {item.linkText} <span>→</span>
+                  </a>
+                )}
               </div>
-              <div>
-                <label className="block text-sm font-medium text-card-foreground mb-2">{t('yourEmail')}</label>
-                <input name="email" type="email" required className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-card-foreground mb-2">{t('message')}</label>
-                <textarea name="message" rows={5} required className="w-full px-4 py-3 rounded-xl bg-background border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-shadow resize-none" />
-              </div>
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-primary-foreground font-semibold transition-all duration-300 hover:shadow-luxury hover:scale-[1.02]"
-              >
-                <Send className="w-4 h-4" /> {t('sendMessage')}
-              </button>
-            </form>
-          </ScrollReveal>
+            </ScrollReveal>
+          ))}
         </div>
-
       </div>
     </main>
   );

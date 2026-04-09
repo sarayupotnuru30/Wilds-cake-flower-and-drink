@@ -30,13 +30,13 @@ const cakeNames = [
   { name: "Barbie Cake", nameAr: "كيك باربي", desc: "Pink Barbie themed dream cake", descAr: "كيك باربي الوردي الحالم", img: "/products/cakes/barbie-cake.jpg" },
   { name: "Engagement Cake", nameAr: "كيك الخطوبة", desc: "Elegant engagement celebration cake", descAr: "كيك خطوبة أنيق", img: "/products/cakes/engagement-cake.jpg" },
   { name: "Chef Theme Cake", nameAr: "كيك الشيف", desc: "Creative chef themed cake", descAr: "كيك إبداعي بطابع الشيف", img: "/products/cakes/chef-theme-cake.jpg" },
-  { name: "Princess Castle Cake", nameAr: "كيك قلعة الأميرة", desc: "Fairy tale princess castle cake", descAr: "كيك قلعة الأميرة الخيالي", img: "/products/cakes/princess-castle-cake.jpg" },
-  { name: "Unicorn Cake", nameAr: "كيك يونيكورن", desc: "Magical unicorn rainbow cake", descAr: "كيك يونيكورن قوس قزح السحري", featured: true, img: "/products/cakes/unicorn-cake.jpg" },
-  { name: "Dinosaur Cake", nameAr: "كيك ديناصور", desc: "Jurassic dinosaur themed cake", descAr: "كيك ديناصور من العصر الجوراسي", img: "/products/cakes/dinosaur-cake.jpg" },
-  { name: "Safari Cake", nameAr: "كيك سفاري", desc: "Wild safari adventure cake", descAr: "كيك مغامرة السفاري البرية", img: "/products/cakes/safari-cake.jpg" },
-  { name: "Galaxy Cake", nameAr: "كيك المجرة", desc: "Cosmic galaxy themed cake", descAr: "كيك كوني بطابع المجرة", img: "/products/cakes/galaxy-cake.jpg" },
-  { name: "Balloon Cake", nameAr: "كيك البالونات", desc: "Colorful balloon celebration cake", descAr: "كيك احتفال بالبالونات الملونة", img: "/products/cakes/balloon-cake.jpg" },
-  { name: "Graduation Cake", nameAr: "كيك التخرج", desc: "Proud graduation celebration cake", descAr: "كيك احتفال التخرج الفخور", img: "/products/cakes/graduation-cake.jpg" },
+  // { name: "Princess Castle Cake", nameAr: "كيك قلعة الأميرة", desc: "Fairy tale princess castle cake", descAr: "كيك قلعة الأميرة الخيالي", img: "/products/cakes/princess-castle-cake.jpg" },
+  // { name: "Unicorn Cake", nameAr: "كيك يونيكورن", desc: "Magical unicorn rainbow cake", descAr: "كيك يونيكورن قوس قزح السحري", featured: true, img: "/products/cakes/unicorn-cake.jpg" },
+  // { name: "Dinosaur Cake", nameAr: "كيك ديناصور", desc: "Jurassic dinosaur themed cake", descAr: "كيك ديناصور من العصر الجوراسي", img: "/products/cakes/dinosaur-cake.jpg" },
+  // { name: "Safari Cake", nameAr: "كيك سفاري", desc: "Wild safari adventure cake", descAr: "كيك مغامرة السفاري البرية", img: "/products/cakes/safari-cake.jpg" },
+  // { name: "Galaxy Cake", nameAr: "كيك المجرة", desc: "Cosmic galaxy themed cake", descAr: "كيك كوني بطابع المجرة", img: "/products/cakes/galaxy-cake.jpg" },
+  // { name: "Balloon Cake", nameAr: "كيك البالونات", desc: "Colorful balloon celebration cake", descAr: "كيك احتفال بالبالونات الملونة", img: "/products/cakes/balloon-cake.jpg" },
+  // { name: "Graduation Cake", nameAr: "كيك التخرج", desc: "Proud graduation celebration cake", descAr: "كيك احتفال التخرج الفخور", img: "/products/cakes/graduation-cake.jpg" },
 ];
 
 const juiceList = [
@@ -55,21 +55,21 @@ const juiceList = [
 ];
 
 const floralList = [
-  { name: "Rose Elegance Bouquet", nameAr: "باقة أناقة الورد", desc: "Premium red and pink roses arrangement", descAr: "تنسيق ورد أحمر ووردي فاخر", featured: true, img: "/products/floral/rose-elegance.jpg" },
-  { name: "White Lily Bouquet", nameAr: "باقة الزنبق الأبيض", desc: "Pure white lilies with greenery", descAr: "زنبق أبيض نقي مع خضرة", img: "/products/floral/white-lily.jpg" },
-  { name: "Sunflower Delight", nameAr: "بهجة عباد الشمس", desc: "Bright sunflower arrangement", descAr: "تنسيق عباد شمس مشرق", img: "/products/floral/sunflower.jpg" },
-  { name: "Wedding Bouquet Classic", nameAr: "باقة زفاف كلاسيكية", desc: "Elegant wedding bridal bouquet", descAr: "باقة عروس زفاف أنيقة", featured: true, img: "/products/floral/wedding-bouquet.jpg" },
-  { name: "Chocolate Bouquet", nameAr: "باقة شوكولاتة", desc: "Premium chocolate and flower combo", descAr: "مزيج فاخر من الشوكولاتة والزهور", img: "/products/floral/chocolate-bouquet.jpg" },
-  { name: "Balloon Bouquet", nameAr: "باقة بالونات", desc: "Festive balloon and flower arrangement", descAr: "تنسيق بالونات وزهور احتفالي", img: "/products/floral/balloon-bouquet.jpg" },
-  { name: "Floral Tray Arrangement", nameAr: "تنسيق صينية زهور", desc: "Elegant floral tray for gifting", descAr: "صينية زهور أنيقة للإهداء", img: "/products/floral/floral-tray.jpg" },
-  { name: "Peony Paradise", nameAr: "جنة الفاوانيا", desc: "Luxurious peony flower bouquet", descAr: "باقة زهور فاوانيا فاخرة", img: "/products/floral/peony-paradise.jpg" },
-  { name: "Orchid Dream", nameAr: "حلم الأوركيد", desc: "Exotic orchid arrangement", descAr: "تنسيق أوركيد غريب", img: "/products/floral/orchid-dream.jpg" },
-  { name: "Tulip Festival", nameAr: "مهرجان التوليب", desc: "Colorful tulip bouquet", descAr: "باقة توليب ملونة", img: "/products/floral/tulip-festival.jpg" },
-  { name: "Mixed Garden Bouquet", nameAr: "باقة الحديقة المختلطة", desc: "Seasonal mixed flower bouquet", descAr: "باقة زهور موسمية مختلطة", img: "/products/floral/mixed-garden.jpg" },
-  { name: "Lavender Bliss", nameAr: "نعيم اللافندر", desc: "Calming lavender arrangement", descAr: "تنسيق لافندر مهدئ", img: "/products/floral/lavender-bliss.jpg" },
-  { name: "Royal Flower Box", nameAr: "صندوق الزهور الملكي", desc: "Luxury flower box arrangement", descAr: "تنسيق صندوق زهور فاخر", img: "/products/floral/royal-flower-box.jpg" },
-  { name: "Tropical Paradise", nameAr: "جنة استوائية", desc: "Exotic tropical flower mix", descAr: "مزيج زهور استوائية غريبة", img: "/products/floral/tropical-paradise.jpg" },
-  { name: "Baby Shower Bouquet", nameAr: "باقة استقبال المولود", desc: "Soft pastel baby shower arrangement", descAr: "تنسيق باستيل ناعم لاستقبال المولود", img: "/products/floral/baby-shower.jpg" },
+  { name: "Classic Crimson Bouquet", nameAr: "باقة الكرمزي الكلاسيكية", desc: "Timeless red roses with delicate baby’s breath and greenery.", descAr: "ورود حمراء كلاسيكية مع زهور بيضاء رقيقة وأوراق خضراء.", featured: true, img: "/products/floral/rose-elegance.jpg" },
+  { name: "Magenta Garden Vase", nameAr: "مزهرية الحديقة الأرجوانية", desc: "Textured pink roses and spray roses in a birthday vase.", descAr: "مزيج من الورود الوردية المتنوعة في مزهرية ميلاد أنيقة.", img: "/products/floral/white-lily.jpg" },
+  { name: "Velvet Rose Basin", nameAr: "حوض الورد المخملي", desc: "Dense mound of premium red roses in a modern silver bowl.", descAr: "تنسيق فخم من الجوري الأحمر في وعاء فضي عصري.", img: "/products/floral/sunflower.jpg" },
+  { name: "Verdant White Bloom Box", nameAr: "صندوق الزهور الأبيض والنضر", desc: "Ivory roses and lisianthus in a lime-green, ribbon-tied box.", descAr: "ورود عاجية ناعمة في صندوق أخضر زاهٍ مزين بشريط.", featured: true, img: "/products/floral/wedding-bouquet.jpg" },
+  { name: "Lavender Mist Bouquet", nameAr: "باقة ضباب اللافندر", desc: "Romantic lavender roses and carnations in soft white paper.", descAr: "ورود لافندر وقرنفل رومانسية مغلفة بورق أبيض ناعم.", img: "/products/floral/chocolate-bouquet.jpg" },
+  { name: "Blush & Petal Wrap", nameAr: "باقة بتلات الورد", desc: "Multitonal pink roses and eucalyptus with a satin bow.", descAr: "ورود وردية مع أغصان الأوكالبتوس وفيونكة ساتان رقيقة.", img: "/products/floral/balloon-bouquet.jpg" },
+  // { name: "Floral Tray Arrangement", nameAr: "تنسيق صينية زهور", desc: "Elegant floral tray for gifting", descAr: "صينية زهور أنيقة للإهداء", img: "/products/floral/floral-tray.jpg" },
+  // { name: "Peony Paradise", nameAr: "جنة الفاوانيا", desc: "Luxurious peony flower bouquet", descAr: "باقة زهور فاوانيا فاخرة", img: "/products/floral/peony-paradise.jpg" },
+  // { name: "Orchid Dream", nameAr: "حلم الأوركيد", desc: "Exotic orchid arrangement", descAr: "تنسيق أوركيد غريب", img: "/products/floral/orchid-dream.jpg" },
+  // { name: "Tulip Festival", nameAr: "مهرجان التوليب", desc: "Colorful tulip bouquet", descAr: "باقة توليب ملونة", img: "/products/floral/tulip-festival.jpg" },
+  // { name: "Mixed Garden Bouquet", nameAr: "باقة الحديقة المختلطة", desc: "Seasonal mixed flower bouquet", descAr: "باقة زهور موسمية مختلطة", img: "/products/floral/mixed-garden.jpg" },
+  // { name: "Lavender Bliss", nameAr: "نعيم اللافندر", desc: "Calming lavender arrangement", descAr: "تنسيق لافندر مهدئ", img: "/products/floral/lavender-bliss.jpg" },
+  // { name: "Royal Flower Box", nameAr: "صندوق الزهور الملكي", desc: "Luxury flower box arrangement", descAr: "تنسيق صندوق زهور فاخر", img: "/products/floral/royal-flower-box.jpg" },
+  // { name: "Tropical Paradise", nameAr: "جنة استوائية", desc: "Exotic tropical flower mix", descAr: "مزيج زهور استوائية غريبة", img: "/products/floral/tropical-paradise.jpg" },
+  // { name: "Baby Shower Bouquet", nameAr: "باقة استقبال المولود", desc: "Soft pastel baby shower arrangement", descAr: "تنسيق باستيل ناعم لاستقبال المولود", img: "/products/floral/baby-shower.jpg" },
 ];
 
 export const products: Product[] = [
