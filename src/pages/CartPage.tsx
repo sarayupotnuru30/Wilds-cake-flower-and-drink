@@ -8,7 +8,7 @@ const CartPage = () => {
   const { items, removeFromCart, updateQuantity, totalPrice } = useCart();
 
   const checkoutMsg = encodeURIComponent(
-    `Hi, I want to order from Wilds Cake Flower & Drink.\n\n${items.map(i => `• ${i.product.name} x${i.quantity} — ${i.product.price * i.quantity} KWD`).join('\n')}\n\nTotal: ${totalPrice} KWD`
+    `Hi, I want to order from Wilds Cake Flower & Drink.\n\n${items.map(i => `• ${i.product.name} x${i.quantity}`).join('\n')}`
   );
 
   if (items.length === 0) {
@@ -41,7 +41,6 @@ const CartPage = () => {
                 <img src={item.product.image} alt={name} className="w-20 h-20 object-cover rounded-lg bg-secondary" />
                 <div className="flex-1 min-w-0">
                   <h3 className="font-heading font-semibold text-card-foreground truncate">{name}</h3>
-                  <p className="text-sm text-muted-foreground">{item.product.price} KWD</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <button onClick={() => updateQuantity(item.product.id, item.quantity - 1)} className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/10 transition-colors">
@@ -53,8 +52,7 @@ const CartPage = () => {
                   </button>
                 </div>
                 <div className="text-right">
-                  <p className="font-bold text-primary">{item.product.price * item.quantity} KWD</p>
-                  <button onClick={() => removeFromCart(item.product.id)} className="text-destructive text-xs flex items-center gap-1 mt-1 hover:underline">
+                  <button onClick={() => removeFromCart(item.product.id)} className="text-destructive text-xs flex items-center gap-1 hover:underline">
                     <Trash2 className="w-3 h-3" /> {t('remove')}
                   </button>
                 </div>
@@ -65,10 +63,6 @@ const CartPage = () => {
 
         {/* Total & Checkout */}
         <div className="mt-8 p-6 bg-card rounded-xl border border-border/50 shadow-card">
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-lg font-heading font-semibold">{t('total')}</span>
-            <span className="text-2xl font-bold text-primary">{totalPrice} KWD</span>
-          </div>
           <a
             href={`https://wa.me/96565643999?text=${checkoutMsg}`}
             target="_blank"
