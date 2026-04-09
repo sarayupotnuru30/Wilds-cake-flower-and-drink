@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Instagram, Phone, Mail, MapPin, ArrowUp, Heart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from '@/assets/logo.jpg';
 
@@ -15,17 +15,29 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Wilds" className="w-10 h-10 rounded-full" />
+              <img 
+                src={logo} 
+                alt="Wilds" 
+                className="w-10 h-10 rounded-md object-cover" 
+              />
               <div>
                 <span className="font-heading text-xl font-bold">WILDS</span>
-                <span className="block text-[10px] tracking-[0.2em] opacity-60 uppercase">Cake Flower & Drink</span>
+                <span className="block text-[10px] tracking-[0.2em] text-white/80 uppercase">
+                  Cake Flower & Drink
+                </span>
               </div>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
               Premium cakes, luxury bouquets & fresh drinks in Kuwait.
             </p>
             <div className="flex gap-3 mt-6">
-              <a href="https://instagram.com/Wilds_kuwait" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-background/10 hover:bg-primary transition-colors duration-300">
+              <a 
+                href="https://instagram.com/Wilds_kuwait" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="p-2 rounded-full bg-background/10 hover:bg-primary transition-colors duration-300"
+              >
+                <span className="sr-only">Instagram</span>
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -41,7 +53,12 @@ const Footer = () => {
                 { to: '/about', label: t('about') },
                 { to: '/contact', label: t('contact') },
               ].map(link => (
-                <Link key={link.to} to={link.to} onClick={scrollToTop} className="block text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300">
+                <Link 
+                  key={link.to} 
+                  to={link.to} 
+                  onClick={scrollToTop} 
+                  className="block text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -53,7 +70,12 @@ const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-6">{t('productCategories')}</h4>
             <div className="space-y-3">
               {[t('cakes'), t('floral'), t('juices')].map(cat => (
-                <Link key={cat} to="/shop" onClick={scrollToTop} className="block text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300">
+                <Link 
+                  key={cat} 
+                  to="/shop" 
+                  onClick={scrollToTop} 
+                  className="block text-sm opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300"
+                >
                   {cat}
                 </Link>
               ))}
@@ -80,9 +102,37 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm opacity-50">© 2024 Wilds. {t('allRightsReserved')}</p>
-          <button onClick={scrollToTop} className="flex items-center gap-2 text-sm opacity-50 hover:opacity-100 transition-opacity duration-300">
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-sm opacity-50">© 2024 Wilds. {t('allRightsReserved')}</p>
+            
+            {/* StaffArc Attribution */}
+            <div className="flex justify-center items-center gap-1 text-sm">
+              Made with 
+              {/* Updated: Added fill-red-500 to fill the heart icon */}
+              <Heart className="inline h-4 w-4 text-red-500 fill-red-500 mx-1" /> 
+              by
+              <a
+                href="https://staffarc.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-orange-600 hover:underline font-medium"
+              >
+                <img
+                  src="https://www.staffarc.in/images/Staffarc-logo.png"
+                  alt="StaffArc logo"
+                  className="h-5 w-5 object-contain"
+                />
+                StaffArc
+              </a>
+            </div>
+          </div>
+
+          <button 
+            onClick={scrollToTop} 
+            className="flex items-center gap-2 text-sm opacity-50 hover:opacity-100 transition-opacity duration-300"
+          >
             <ArrowUp className="w-4 h-4" /> {t('scrollToTop')}
           </button>
         </div>
