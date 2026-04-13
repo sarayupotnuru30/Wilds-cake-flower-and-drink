@@ -1,3 +1,147 @@
+// export type Language = 'en' | 'ar';
+
+// export const translations: Record<Language, Record<string, string>> = {
+//   en: {
+//     // Navbar
+//     home: "Home",
+//     shop: "Shop",
+//     cart: "Cart",
+//     about: "About",
+//     contact: "Contact",
+//     // Hero
+//     heroTitle: "Celebrate Every Moment with Wilds",
+//     heroSubtitle: "Luxury Cakes, Bouquets & Fresh Drinks in Kuwait",
+//     shopNow: "Shop Now",
+//     orderWhatsApp: "Order via WhatsApp",
+//     // Categories
+//     categories: "Our Collections",
+//     categoriesSubtitle: "Explore our premium handcrafted selections",
+//     cakes: "Cakes",
+//     floral: "Floral",
+//     juices: "Juices",
+//     // Featured
+//     featuredProducts: "Featured Products",
+//     featuredSubtitle: "Handpicked favorites for every celebration",
+//     viewAll: "View All",
+//     // About preview
+//     aboutPreviewTitle: "Crafted with Passion",
+//     aboutPreviewText: "WILDS is a premium cake, flowers, and celebration brand based in Kuwait. We specialize in customized cakes, luxury bouquets, helium balloons, and fresh juices — all designed to create a high-end gifting experience.",
+//     learnMore: "Learn More",
+//     // CTA
+//     ctaTitle: "Make Every Occasion Special with Wilds",
+//     ctaSubtitle: "From birthdays to weddings, we craft moments worth remembering",
+//     // Shop
+//     allProducts: "All Products",
+//     addToCart: "Add to Cart",
+//     added: "Added!",
+//     filterAll: "All",
+//     // Cart
+//     yourCart: "Your Cart",
+//     emptyCart: "Your cart is empty",
+//     continueShopping: "Continue Shopping",
+//     total: "Total",
+//     checkout: "Checkout via WhatsApp",
+//     remove: "Remove",
+//     quantity: "Quantity",
+//     // Contact
+//     contactUs: "Contact Us",
+//     contactSubtitle: "We'd love to hear from you",
+//     phone: "Phone",
+//     email: "Email",
+//     address: "Address",
+//     businessHours: "Business Hours",
+//     hoursValue: "Sunday to Saturday, 2 PM to 1 AM",
+//     sendMessage: "Send Message",
+//     yourName: "Your Name",
+//     yourEmail: "Your Email",
+//     message: "Message",
+//     // About
+//     aboutTitle: "About Wilds",
+//     aboutDescription: "WILDS is a premium cake, flowers, and celebration brand based in Kuwait. We specialize in customized cakes, luxury bouquets, helium balloons, and fresh juices — all designed to create a high-end gifting experience. Our focus is on quality, presentation, and fast service.",
+//     ourServices: "Our Services",
+//     customCakes: "Customized Cakes",
+//     premiumBouquets: "Premium Bouquets",
+//     freshJuices: "Fresh Juices & Mocktails",
+//     heliumBalloons: "Helium Balloons",
+//     // Footer
+//     quickLinks: "Quick Links",
+//     productCategories: "Categories",
+//     contactInfo: "Contact Info",
+//     followUs: "Follow Us",
+//     allRightsReserved: "All rights reserved.",
+//     // Misc
+//     scrollToTop: "Back to Top",
+//     whatsappMessage: "Hello! I would like to place an order with Wilds Cake, Flower & Drink. Could you please send me your current price list and availability?",
+//     price: "Price",
+//   },
+//   ar: {
+//     home: "الرئيسية",
+//     shop: "المتجر",
+//     cart: "السلة",
+//     about: "من نحن",
+//     contact: "اتصل بنا",
+//     heroTitle: "احتفل بكل لحظة مع وايلدز",
+//     heroSubtitle: "كيك فاخر، باقات زهور ومشروبات طازجة في الكويت",
+//     shopNow: "تسوق الآن",
+//     orderWhatsApp: "اطلب عبر واتساب",
+//     categories: "مجموعاتنا",
+//     categoriesSubtitle: "استكشف تشكيلاتنا الفاخرة المصنوعة يدوياً",
+//     cakes: "كيك",
+//     floral: "زهور",
+//     juices: "عصائر",
+//     featuredProducts: "منتجات مميزة",
+//     featuredSubtitle: "اختيارات مفضلة لكل مناسبة",
+//     viewAll: "عرض الكل",
+//     aboutPreviewTitle: "صُنع بشغف",
+//     aboutPreviewText: "وايلدز هي علامة تجارية فاخرة للكيك والزهور والاحتفالات في الكويت. نتخصص في الكيك المخصص وباقات الزهور الفاخرة والبالونات والعصائر الطازجة — كلها مصممة لتقديم تجربة هدايا راقية.",
+//     learnMore: "اعرف المزيد",
+//     ctaTitle: "اجعل كل مناسبة مميزة مع وايلدز",
+//     ctaSubtitle: "من أعياد الميلاد إلى حفلات الزفاف، نصنع لحظات تستحق التذكر",
+//     allProducts: "جميع المنتجات",
+//     addToCart: "أضف للسلة",
+//     added: "تمت الإضافة!",
+//     filterAll: "الكل",
+//     yourCart: "سلة التسوق",
+//     emptyCart: "سلة التسوق فارغة",
+//     continueShopping: "متابعة التسوق",
+//     total: "المجموع",
+//     checkout: "إتمام الشراء عبر واتساب",
+//     remove: "إزالة",
+//     quantity: "الكمية",
+//     contactUs: "اتصل بنا",
+//     contactSubtitle: "يسعدنا سماع رأيك",
+//     phone: "الهاتف",
+//     email: "البريد الإلكتروني",
+//     address: "العنوان",
+//     businessHours: "ساعات العمل",
+//     hoursValue: "الأحد إلى السبت، ٢ ظهراً حتى ١ صباحاً",
+//     sendMessage: "إرسال الرسالة",
+//     yourName: "اسمك",
+//     yourEmail: "بريدك الإلكتروني",
+//     message: "الرسالة",
+//     aboutTitle: "عن وايلدز",
+//     aboutDescription: "وايلدز هي علامة تجارية فاخرة للكيك والزهور والاحتفالات في الكويت. نتخصص في الكيك المخصص وباقات الزهور الفاخرة والبالونات والعصائر الطازجة — كلها مصممة لتقديم تجربة هدايا راقية. تركيزنا على الجودة والعرض والخدمة السريعة.",
+//     ourServices: "خدماتنا",
+//     customCakes: "كيك مخصص",
+//     premiumBouquets: "باقات زهور فاخرة",
+//     freshJuices: "عصائر طازجة وموكتيل",
+//     heliumBalloons: "بالونات هيليوم",
+//     quickLinks: "روابط سريعة",
+//     productCategories: "الفئات",
+//     contactInfo: "معلومات الاتصال",
+//     followUs: "تابعنا",
+//     allRightsReserved: "جميع الحقوق محفوظة.",
+//     scrollToTop: "العودة للأعلى",
+//     whatsappMessage: "مرحباً، أريد الطلب من وايلدز كيك فلاور آند درينك.",
+//     price: "السعر",
+//   },
+// };
+
+
+
+
+
+
 export type Language = 'en' | 'ar';
 
 export const translations: Record<Language, Record<string, string>> = {
@@ -8,33 +152,42 @@ export const translations: Record<Language, Record<string, string>> = {
     cart: "Cart",
     about: "About",
     contact: "Contact",
+
     // Hero
     heroTitle: "Celebrate Every Moment with Wilds",
     heroSubtitle: "Luxury Cakes, Bouquets & Fresh Drinks in Kuwait",
     shopNow: "Shop Now",
     orderWhatsApp: "Order via WhatsApp",
+
     // Categories
     categories: "Our Collections",
     categoriesSubtitle: "Explore our premium handcrafted selections",
     cakes: "Cakes",
     floral: "Floral",
     juices: "Juices",
+
     // Featured
     featuredProducts: "Featured Products",
     featuredSubtitle: "Handpicked favorites for every celebration",
     viewAll: "View All",
+
     // About preview
     aboutPreviewTitle: "Crafted with Passion",
-    aboutPreviewText: "WILDS is a premium cake, flowers, and celebration brand based in Kuwait. We specialize in customized cakes, luxury bouquets, helium balloons, and fresh juices — all designed to create a high-end gifting experience.",
+    aboutPreviewText:
+      "WILDS is a premium cake, flowers, and celebration brand based in Kuwait. We specialize in customized cakes, luxury bouquets, helium balloons, and fresh juices — all designed to create a high-end gifting experience.",
     learnMore: "Learn More",
+
     // CTA
     ctaTitle: "Make Every Occasion Special with Wilds",
-    ctaSubtitle: "From birthdays to weddings, we craft moments worth remembering",
+    ctaSubtitle:
+      "From birthdays to weddings, we craft moments worth remembering",
+
     // Shop
     allProducts: "All Products",
     addToCart: "Add to Cart",
     added: "Added!",
     filterAll: "All",
+
     // Cart
     yourCart: "Your Cart",
     emptyCart: "Your cart is empty",
@@ -43,9 +196,28 @@ export const translations: Record<Language, Record<string, string>> = {
     checkout: "Checkout via WhatsApp",
     remove: "Remove",
     quantity: "Quantity",
-    // Contact
+
+    // Contact (existing)
     contactUs: "Contact Us",
     contactSubtitle: "We'd love to hear from you",
+
+    // ✅ NEW (for your Contact page)
+    getInTouch: "GET IN TOUCH",
+    contactSub:
+      "Have questions or want to place a bulk order? Reach out to us!",
+    visitUs: "Visit Us",
+    callUs: "Call Us",
+    callNow: "Call Now",
+    viewOnMap: "View on Map",
+
+    instagram: "Instagram",
+    instagramText: "@Wilds_kuwait\nFollow us for updates!",
+    openInstagram: "Open Instagram",
+
+    whatsappText: "Message us directly for quick orders!",
+    chatWhatsapp: "Chat on WhatsApp",
+
+    // Contact form
     phone: "Phone",
     email: "Email",
     address: "Address",
@@ -55,52 +227,71 @@ export const translations: Record<Language, Record<string, string>> = {
     yourName: "Your Name",
     yourEmail: "Your Email",
     message: "Message",
+
     // About
     aboutTitle: "About Wilds",
-    aboutDescription: "WILDS is a premium cake, flowers, and celebration brand based in Kuwait. We specialize in customized cakes, luxury bouquets, helium balloons, and fresh juices — all designed to create a high-end gifting experience. Our focus is on quality, presentation, and fast service.",
+    aboutDescription:
+      "WILDS is a premium cake, flowers, and celebration brand based in Kuwait...",
     ourServices: "Our Services",
     customCakes: "Customized Cakes",
     premiumBouquets: "Premium Bouquets",
     freshJuices: "Fresh Juices & Mocktails",
     heliumBalloons: "Helium Balloons",
+
     // Footer
     quickLinks: "Quick Links",
     productCategories: "Categories",
     contactInfo: "Contact Info",
     followUs: "Follow Us",
     allRightsReserved: "All rights reserved.",
+
     // Misc
     scrollToTop: "Back to Top",
-    whatsappMessage: "Hello! I would like to place an order with Wilds Cake, Flower & Drink. Could you please send me your current price list and availability?",
+    whatsappMessage:
+      "Hello! I would like to place an order with Wilds Cake, Flower & Drink.",
     price: "Price",
+
+    addressText: "Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed commercial complex, opposite to Grand Hyper Market, Shop no- 6.\nZip Code-30000",
+whatsapp: "WhatsApp",
+
   },
+
   ar: {
     home: "الرئيسية",
     shop: "المتجر",
     cart: "السلة",
     about: "من نحن",
     contact: "اتصل بنا",
+
     heroTitle: "احتفل بكل لحظة مع وايلدز",
     heroSubtitle: "كيك فاخر، باقات زهور ومشروبات طازجة في الكويت",
     shopNow: "تسوق الآن",
     orderWhatsApp: "اطلب عبر واتساب",
+
     categories: "مجموعاتنا",
     categoriesSubtitle: "استكشف تشكيلاتنا الفاخرة المصنوعة يدوياً",
     cakes: "كيك",
     floral: "زهور",
     juices: "عصائر",
+
     featuredProducts: "منتجات مميزة",
     featuredSubtitle: "اختيارات مفضلة لكل مناسبة",
     viewAll: "عرض الكل",
+
     aboutPreviewTitle: "صُنع بشغف",
-    aboutPreviewText: "وايلدز هي علامة تجارية فاخرة للكيك والزهور والاحتفالات في الكويت. نتخصص في الكيك المخصص وباقات الزهور الفاخرة والبالونات والعصائر الطازجة — كلها مصممة لتقديم تجربة هدايا راقية.",
+    aboutPreviewText:
+      "وايلدز هي علامة تجارية فاخرة للكيك والزهور...",
     learnMore: "اعرف المزيد",
+
     ctaTitle: "اجعل كل مناسبة مميزة مع وايلدز",
-    ctaSubtitle: "من أعياد الميلاد إلى حفلات الزفاف، نصنع لحظات تستحق التذكر",
+    ctaSubtitle:
+      "من أعياد الميلاد إلى حفلات الزفاف، نصنع لحظات تستحق التذكر",
+
     allProducts: "جميع المنتجات",
     addToCart: "أضف للسلة",
     added: "تمت الإضافة!",
     filterAll: "الكل",
+
     yourCart: "سلة التسوق",
     emptyCart: "سلة التسوق فارغة",
     continueShopping: "متابعة التسوق",
@@ -108,8 +299,26 @@ export const translations: Record<Language, Record<string, string>> = {
     checkout: "إتمام الشراء عبر واتساب",
     remove: "إزالة",
     quantity: "الكمية",
+
     contactUs: "اتصل بنا",
     contactSubtitle: "يسعدنا سماع رأيك",
+
+    // ✅ NEW
+    getInTouch: "تواصل معنا",
+    contactSub:
+      "هل لديك أسئلة أو ترغب في طلب بالجملة؟ تواصل معنا!",
+    visitUs: "زورنا",
+    callUs: "اتصل بنا",
+    callNow: "اتصل الآن",
+    viewOnMap: "عرض على الخريطة",
+
+    instagram: "انستغرام",
+    instagramText: "@Wilds_kuwait\nتابعنا للحصول على التحديثات!",
+    openInstagram: "افتح انستغرام",
+
+    whatsappText: "راسلنا مباشرة للطلبات السريعة!",
+    chatWhatsapp: "الدردشة عبر واتساب",
+
     phone: "الهاتف",
     email: "البريد الإلكتروني",
     address: "العنوان",
@@ -119,20 +328,27 @@ export const translations: Record<Language, Record<string, string>> = {
     yourName: "اسمك",
     yourEmail: "بريدك الإلكتروني",
     message: "الرسالة",
+
     aboutTitle: "عن وايلدز",
-    aboutDescription: "وايلدز هي علامة تجارية فاخرة للكيك والزهور والاحتفالات في الكويت. نتخصص في الكيك المخصص وباقات الزهور الفاخرة والبالونات والعصائر الطازجة — كلها مصممة لتقديم تجربة هدايا راقية. تركيزنا على الجودة والعرض والخدمة السريعة.",
+    aboutDescription:
+      "وايلدز هي علامة تجارية فاخرة للكيك والزهور...",
     ourServices: "خدماتنا",
     customCakes: "كيك مخصص",
     premiumBouquets: "باقات زهور فاخرة",
     freshJuices: "عصائر طازجة وموكتيل",
     heliumBalloons: "بالونات هيليوم",
+
     quickLinks: "روابط سريعة",
     productCategories: "الفئات",
     contactInfo: "معلومات الاتصال",
     followUs: "تابعنا",
     allRightsReserved: "جميع الحقوق محفوظة.",
+
     scrollToTop: "العودة للأعلى",
-    whatsappMessage: "مرحباً، أريد الطلب من وايلدز كيك فلاور آند درينك.",
+    whatsappMessage: "مرحباً، أريد الطلب من وايلدز.",
     price: "السعر",
+
+    addressText: "وايلدز - كيك ومشروبات\nحولي، شارع تونس\nمجمع الحمد التجاري، مقابل جراند هايبر ماركت، محل رقم 6\nالرمز البريدي: 30000",
+whatsapp: "واتساب",
   },
 };
