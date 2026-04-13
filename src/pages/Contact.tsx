@@ -9,7 +9,7 @@
 //     { 
 //       icon: MapPin, 
 //       label: t('visitUs') || 'Visit Us', 
-//       value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed Complex, Shop 6',
+//       value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed commercial complex, opposite to Grand Hyper Market, Shop no- 6.\nZip Code-30000',
 //       linkText: null, 
 //       href: null,
 //       iconBg: 'bg-[#FFB6C1]' 
@@ -97,6 +97,7 @@
 // export default Contact;
 
 
+
 import { Phone, Mail, MapPin, Clock, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -109,15 +110,15 @@ const Contact = () => {
       icon: MapPin, 
       label: t('visitUs') || 'Visit Us', 
       value: 'Wilds - Cake & Drink\nHawally, Tunis Street\nAl-Hammed commercial complex, opposite to Grand Hyper Market, Shop no- 6.\nZip Code-30000',
-      linkText: null, 
-      href: null,
+      linkText: t('viewOnMap') || 'View on Map', 
+      href: 'https://www.google.com/maps?cid=9179077762939181167&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=IN&source=embed', // Updated with your location link
       iconBg: 'bg-[#FFB6C1]' 
     },
     { 
       icon: Phone, 
       label: t('callUs') || 'Call Us', 
       value: '+965 65643999', 
-      linkText: 'Call Now',
+      linkText: t('callNow') || 'Call Now',
       href: 'tel:+96565643999',
       iconBg: 'bg-[#FFB6C1]' 
     },
@@ -145,12 +146,14 @@ const Contact = () => {
         
         {/* Header Section */}
         <ScrollReveal className="text-center mb-16">
-          <p className="text-[#FF69B4] uppercase tracking-[0.2em] text-sm font-bold mb-2">GET IN TOUCH</p>
+          <p className="text-[#FF69B4] uppercase tracking-[0.2em] text-sm font-bold mb-2">
+            {t('getInTouch') || 'GET IN TOUCH'}
+          </p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-black">
-            Contact Us
+            {t('contactUs') || 'Contact Us'}
           </h1>
           <p className="text-[#7D7D7D] text-lg max-w-2xl mx-auto">
-            Have questions or want to place a bulk order? Reach out to us!
+            {t('contactSub') || 'Have questions or want to place a bulk order? Reach out to us!'}
           </p>
         </ScrollReveal>
 
@@ -173,12 +176,12 @@ const Contact = () => {
                   </p>
                 </div>
 
-                {/* Footer Style Link (Conditionally rendered) */}
-                {item.linkText && (
+                {/* Footer Style Link */}
+                {item.linkText && item.href && (
                   <a 
                     href={item.href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-[#FF69B4] font-semibold text-sm hover:text-[#D43790] flex items-center gap-2 transition-all underline underline-offset-4"
                   >
                     {item.linkText} <span>→</span>
